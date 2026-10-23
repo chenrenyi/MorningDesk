@@ -1,5 +1,9 @@
 # 创意工坊上传说明
 
+当前条目：<https://steamcommunity.com/sharedfiles/filedetails/?id=3825200540>
+
+> 截至 2026-10-23 仍在 Steam 审核中，通过前链接可能无法访问。
+
 ## 为什么只传前端
 
 Steam 创意工坊对「应用程序」类壁纸审核很严：

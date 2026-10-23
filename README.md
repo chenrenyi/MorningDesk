@@ -21,9 +21,9 @@
 
 在 Wallpaper Engine 的创意工坊里订阅 **MorningDesk 清晨书桌**：
 
-> <https://steamcommunity.com/sharedfiles/filedetails/?id=XXXXXXXXX>
+> <https://steamcommunity.com/sharedfiles/filedetails/?id=3825200540>
 
-（上面的 id 需要替换成实际的创意工坊链接。）
+> **状态：审核中。** 截至 2026-10-23，该创意工坊条目仍在 Steam 审核，通过前链接可能无法打开或搜索不到。审核通过后即可正常订阅；在那之前可以先按 [docs/WORKSHOP.md](docs/WORKSHOP.md) 把工程加载到本地预览。
 
 ### 第 2 步：下载后台
 
