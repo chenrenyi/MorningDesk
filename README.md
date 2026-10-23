@@ -2,7 +2,7 @@
 
 一块给 Wallpaper Engine 用的动态桌面壁纸：清晨书桌的实景里嵌着时钟、台历、CPU / GPU / 内存便签，以及一块天气 + 网速屏。所有数字都是真实的 —— 来自你这台电脑。
 
-![预览](docs/preview.jpg)
+![预览](docs/preview-live.jpg)
 
 项目由两部分组成：
 
