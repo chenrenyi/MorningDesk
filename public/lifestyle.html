@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c99c65" />
+    <title>Morning Desk</title>
+    <link rel="stylesheet" href="./lifestyle.css?v=17" />
+  </head>
+  <body>
+    <main id="scene" class="scene" aria-label="清晨书桌硬件监控壁纸">
+      <section class="warp" data-warp="clock">
+        <div class="clock-screen">
+          <div class="clock-time">
+            <span id="life-hour">00</span>
+            <span class="clock-colon">:</span>
+            <span id="life-minute">00</span>
+          </div>
+          <div id="life-seconds" class="clock-seconds">00</div>
+        </div>
+      </section>
+
+      <section class="warp" data-warp="calendar">
+        <div class="calendar-page">
+          <p id="life-weekday" class="calendar-weekday">星期六</p>
+          <strong id="life-day" class="calendar-day">30</strong>
+          <p id="life-month" class="calendar-month">2026年 5月</p>
+          <p id="life-lunar" class="calendar-lunar">农历 四月十四</p>
+        </div>
+      </section>
+
+      <section class="warp" data-warp="cpu">
+        <div class="memo memo-dual">
+          <span>CPU</span>
+          <div class="memo-labels"><small>LOAD</small><small>TEMP</small></div>
+          <div class="memo-values">
+            <strong><b id="life-cpu">--</b><em>%</em></strong>
+            <strong><b id="life-cpu-temp">--</b><em>°</em></strong>
+          </div>
+        </div>
+      </section>
+      <section class="warp" data-warp="gpu">
+        <div class="memo memo-dual">
+          <span>GPU</span>
+          <div class="memo-labels"><small>LOAD</small><small>TEMP</small></div>
+          <div class="memo-values">
+            <strong><b id="life-gpu">--</b><em>%</em></strong>
+            <strong><b id="life-gpu-temp">--</b><em>°</em></strong>
+          </div>
+        </div>
+      </section>
+      <section class="warp" data-warp="memory">
+        <div class="memo">
+          <span>MEMORY</span>
+          <strong id="life-memory">--%</strong>
+          <small><i class="memo-bar"><i id="life-memory-bar"></i></i></small>
+        </div>
+      </section>
+
+      <section class="warp" data-warp="screen">
+        <div class="network-screen">
+          <div class="weather-line">
+            <span id="life-weather-icon" class="weather-icon">☀</span>
+            <strong id="life-weather-temp">--°</strong>
+            <small id="life-weather-text">余杭</small>
+          </div>
+          <div><span class="arrow">↓</span><strong id="life-download">--</strong></div>
+          <div><span class="arrow">↑</span><strong id="life-upload">--</strong></div>
+        </div>
+      </section>
+
+      <button id="calibrate-toggle" class="calibrate-toggle" type="button">校准</button>
+      <aside id="calibration-panel" class="calibration-panel" aria-hidden="true">
+        <strong>透视校准</strong>
+        <p>拖动四角，或拖动框内空白区域整体移动。</p>
+        <label>区域
+          <select id="calibration-target"></select>
+        </label>
+        <label class="screen-scale-control">
+          <span>天气屏字号 <output id="screen-scale-value">128%</output></span>
+          <input id="screen-scale" type="range" min="0.9" max="1.6" step="0.02" value="1.28" />
+        </label>
+        <div class="panel-actions">
+          <button id="calibration-reset" type="button">重置当前</button>
+          <button id="calibration-reset-all" type="button">全部重置</button>
+          <button id="calibration-save" type="button">保存</button>
+          <button id="calibration-close" type="button">完成</button>
+        </div>
+      </aside>
+      <div id="calibration-overlay" class="calibration-overlay" aria-hidden="true"></div>
+    </main>
+    <script src="./config.js?v=1"></script>
+    <script src="./lifestyle.js?v=17"></script>
+  </body>
+</html>

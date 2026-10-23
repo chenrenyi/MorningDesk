@@ -1,0 +1,27 @@
+{
+  "name": "morningdesk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MorningDesk: a Wallpaper Engine web wallpaper with a local hardware and weather backend.",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check server/index.js && node --check server/collector.js && node --check server/standalone-entry.js && node --check scripts/build-companion.js && node --check scripts/build-web-wallpaper.js && node --check public/app.js && node --check public/lifestyle.js",
+    "build:companion": "node scripts/build-companion.js",
+    "build:backend": "node scripts/build-companion.js --backend-only",
+    "build:service": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-service.ps1",
+    "build:web": "node scripts/build-web-wallpaper.js",
+    "install:service": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-morningdesk.ps1",
+    "release:package": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/package-release.ps1",
+    "build:release": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-release.ps1",
+    "build:wallpaper": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/build-wallpaper-release.ps1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5",
+    "postject": "^1.0.0-alpha.6"
+  }
+}

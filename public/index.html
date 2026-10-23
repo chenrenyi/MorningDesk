@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071019" />
+    <title>Ambient Hardware Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <main class="dashboard">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <p id="dashboard-title">SYSTEM OVERVIEW</p>
+            <span id="dashboard-subtitle">AMBIENT HARDWARE MONITOR</span>
+          </div>
+        </div>
+        <div class="status">
+          <span id="connection-dot" class="connection-dot"></span>
+          <span id="connection-text">CONNECTING</span>
+          <span class="status-divider"></span>
+          <span id="hostname">LOCAL SYSTEM</span>
+        </div>
+      </header>
+
+      <section class="content-grid">
+        <section class="time-panel">
+          <p id="greeting" class="eyebrow">GOOD EVENING</p>
+          <div id="time" class="time">00:00<span>:00</span></div>
+          <p id="date" class="date">2026年5月30日 星期六</p>
+          <p id="lunar-note" class="muted">LOCAL TIME · HONG KONG</p>
+
+          <div class="calendar card">
+            <div class="calendar-head">
+              <div>
+                <p class="eyebrow">CALENDAR</p>
+                <h2 id="calendar-month">2026 / 05</h2>
+              </div>
+              <span id="week-number">WEEK 22</span>
+            </div>
+            <div class="calendar-grid weekdays" id="weekdays"></div>
+            <div class="calendar-grid days" id="calendar-days"></div>
+          </div>
+        </section>
+
+        <section class="hardware-panel">
+          <div class="hardware-heading">
+            <div>
+              <p class="eyebrow">LIVE TELEMETRY</p>
+              <h1>硬件监控</h1>
+            </div>
+            <p id="platform" class="muted">WINDOWS · INITIALIZING</p>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card card">
+              <div class="metric-top"><span>CPU LOAD</span><b id="cpu-usage">--%</b></div>
+              <div class="ring" id="cpu-ring"><i></i><strong id="cpu-ring-value">--</strong></div>
+              <p id="cpu-name" class="metric-name">Detecting processor...</p>
+              <div class="metric-foot"><span id="cpu-speed">-- GHz</span><span id="cpu-cores">-- THREADS</span></div>
+            </article>
+
+            <article class="metric-card card">
+              <div class="metric-top"><span>MEMORY</span><b id="memory-usage">--%</b></div>
+              <div class="ring" id="memory-ring"><i></i><strong id="memory-ring-value">--</strong></div>
+              <p class="metric-name">SYSTEM MEMORY</p>
+              <div class="metric-foot"><span id="memory-used">-- GB USED</span><span id="memory-total">-- GB TOTAL</span></div>
+            </article>
+
+            <article class="wide-card card gpu-card">
+              <div>
+                <p class="eyebrow">GRAPHICS PROCESSOR</p>
+                <h3 id="gpu-name">DETECTING GPU</h3>
+                <p id="gpu-details" class="muted">GPU telemetry requires NVIDIA SMI support</p>
+              </div>
+              <div class="gauge">
+                <div class="gauge-label"><span>GPU LOAD</span><b id="gpu-usage">--%</b></div>
+                <div class="bar"><i id="gpu-bar"></i></div>
+                <div class="gauge-label"><span>VRAM</span><span id="gpu-memory">-- / -- GB</span></div>
+              </div>
+            </article>
+
+            <article class="wide-card card storage-card">
+              <div>
+                <p class="eyebrow">STORAGE</p>
+                <h3>磁盘空间</h3>
+              </div>
+              <div id="disk-list" class="disk-list"><p class="muted">正在读取磁盘信息...</p></div>
+            </article>
+
+            <article class="info-card card">
+              <p class="eyebrow">NETWORK</p>
+              <h3 id="network-name">OFFLINE</h3>
+              <p id="network-address" class="muted">--</p>
+            </article>
+            <article class="info-card card">
+              <p class="eyebrow">UPTIME</p>
+              <h3 id="uptime">--</h3>
+              <p class="muted">SYSTEM ACTIVE</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <footer>
+        <span>AMBIENT DISPLAY / <b>01</b></span>
+        <span id="last-update">WAITING FOR TELEMETRY</span>
+      </footer>
+    </main>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
